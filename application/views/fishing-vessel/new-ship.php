@@ -1,6 +1,6 @@
 <div class="row">
-    <div class="col-4"></div>
-    <div class="card col-4">
+    <div class="col-lg-3 col-md-1 col-sm-0"></div>
+    <div class="card col-lg-6 col-md-10 col-sm-12">
         <div class="card-body">
             <h5 class="card-title">ข้อมูลเรือประมง</h5>
             <form action="">
@@ -14,5 +14,5 @@
             </form>
         </div>
     </div>
-    <div class="col-4"></div>
+    <div class="col-lg-4 col-md-1 col-sm-0"></div>
 </div>
