@@ -6,14 +6,16 @@ class FishingVessel extends CI_Controller {
 
     public function index()
     {
+        $this->load->model('fishingvessel_model');
+        $result = $this->fishingvessel_model->get_all();
+        $data['vessels'] = $result;
        $this->load->view('header');
-       $this->load->view('fishing-vessel/index');
+       $this->load->view('fishing-vessel/index',$data);
        $this->load->view('footer');
-
     }
     public function all()
     {
-        echo 'Show al vessel';
+        echo 'Show all vessel';
     }
     public function new_vessel()
     {
