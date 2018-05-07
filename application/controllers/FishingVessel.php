@@ -32,11 +32,25 @@ class FishingVessel extends CI_Controller {
     }
     public function create()
     {
-        var_dump($_POST);
+        $this->load->library('form_validation');
+        $this->form_validation->set_rules('vesselName','ชื่อเรือ','required|max_length[10]',array('required' => 'กรุณากรอกชื่อเรือ','max_length'=>'ชื่อเรือไม่เกิน 10 ตัวอักษร'));
+        if($this->form_validation->run() == false)
+        {
+            $this->load->model('country_model');
+            $result = $this->country_model->get_all();
+            $data['country_list'] = $result;
+            $data['title']="เพิ่มข้อมูลเรือประมง";
+
+            $this->load->view('header',$data);
+            $this->load->view('fishing-vessel/new-ship');
+            $this->load->view('footer');
+        }
+        else
+        {
         $this->load->model('fishingvessel_model');
         $this->fishingvessel_model->save_new_vessel();
         redirect('fishingvessel/');
-        
+        }
     }
     public function new_success()
     {
