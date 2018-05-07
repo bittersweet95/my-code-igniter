@@ -30,6 +30,14 @@ class FishingVessel extends CI_Controller {
         $this->load->view('fishing-vessel/new-ship');
         $this->load->view('footer');
     }
+    public function create()
+    {
+        var_dump($_POST);
+        $this->load->model('fishingvessel_model');
+        $this->fishingvessel_model->save_new_vessel();
+        redirect('fishingvessel/');
+        
+    }
     public function new_success()
     {
 
