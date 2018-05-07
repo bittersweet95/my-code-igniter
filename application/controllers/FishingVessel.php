@@ -32,6 +32,13 @@ class FishingVessel extends CI_Controller {
     }
     public function create()
     {
+
+        $config['upload_path'] = './upload/';
+        $config['allowed_types'] = 'gif|jpg|png|jpeg';
+       // $config['max_size'] = 100;
+      //  $config['max_width'] = 1024;
+      $this->load->library('upload',$config);
+
         $this->load->library('form_validation');
         $this->form_validation->set_rules('vesselName','ชื่อเรือ','required|max_length[10]',array('required' => 'กรุณากรอกชื่อเรือ','max_length'=>'ชื่อเรือไม่เกิน 10 ตัวอักษร'));
         if($this->form_validation->run() == false)
@@ -47,9 +54,29 @@ class FishingVessel extends CI_Controller {
         }
         else
         {
-        $this->load->model('fishingvessel_model');
-        $this->fishingvessel_model->save_new_vessel();
-        redirect('fishingvessel/');
+
+        $upload_success = $this->upload->do_upload('vesselImage');
+        if($upload_success){
+            $upload_data = $this->upload->data();
+           $image_path =  'upload/'.$upload_data['file_name'];
+            //var_dump($upload_data);
+
+           // $this->load->model('fishingvessel_model');
+           // $this->fishingVessel_model->save_new_vessel();
+           // redirect('fishingvessel/');
+        }
+        else
+        {
+            $this->load->model('country_model');
+            $result = $this->country_model->get_all();
+            $data['country_list'] = $result;
+            $data['title']="เพิ่มข้อมูลเรือประมง";
+
+            $this->load->view('header',$data);
+            $this->load->view('fishing-vessel/new-ship');
+            $this->load->view('footer');
+        }
+
         }
     }
     public function new_success()
