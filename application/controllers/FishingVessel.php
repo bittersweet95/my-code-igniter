@@ -93,6 +93,15 @@ class FishingVessel extends CI_Controller {
         
     }
 
+    public function report()
+    {
+        $data['title'] = 'รายงานเรือประมง';
+        $this->load->view('header');
+        $this->load->view('fishing-vessel/report');
+        $this->load->view('footer');
+
+    }
+
 }
 
 /* End of file FishingVessel.php */
