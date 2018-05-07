@@ -32,6 +32,7 @@ class FishingVessel extends CI_Controller {
     }
     public function create()
     {
+        //เดี๋ยวจะใส่โค้ดอัพโหลดไฟล์ตรงนี้นะ
         $this->load->library('form_validation');
         $this->form_validation->set_rules('vesselName','ชื่อเรือ','required|max_length[10]',array('required' => 'กรุณากรอกชื่อเรือ','max_length'=>'ชื่อเรือไม่เกิน 10 ตัวอักษร'));
         if($this->form_validation->run() == false)
