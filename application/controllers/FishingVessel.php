@@ -56,6 +56,15 @@ class FishingVessel extends CI_Controller {
     {
 
     }
+    public function delete_vessel()
+    {
+        
+        $this->load->model('fishingvessel_model');
+        $this->fishingvessel_model->delete_vessel();
+        
+        redirect('fishingvessel/');
+        
+    }
 
 }
 
