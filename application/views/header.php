@@ -7,9 +7,9 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
     <script src="<?php=base_url() ?>assets/js/chart/fusioncharts.js"></script>
     <script src="<?php=base_url() ?>assets/js/chart/fusioncharts.charts.js"></script>
-    <script src="<?php=base_url() ?>assets/js/chart/theme/fusioncharts.theme.fint.js"></script>
+    <script src="<?php=base_url() ?>assets/js/chart/themes/fusioncharts.theme.fint.js"></script>
     <script src="<?php=base_url() ?>assets/js/jquery-3.3.1.js"></script>
-    <script src="<?php=base_url() ?>assets/js/jquery-fusioncharts.js"></script>
+    <script src="<?php=base_url() ?>assets/js/fusioncharts-jquery-plugin.js"></script>
     <title>Fishing Vessel</title>
 </head>
 <body>
