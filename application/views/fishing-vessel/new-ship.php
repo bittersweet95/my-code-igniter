@@ -3,6 +3,7 @@
     <div class="card col-lg-6 col-md-10 col-sm-12">
         <div class="card-body">
             <h5 class="card-title">ข้อมูลเรือประมง</h5>
+            <?php echo validation_errors(); ?>
             <?php echo form_open('fishingvessel/create') ?>
                 <div class="form-group">
                     <label for="vesselName">ชื่อ</label>
