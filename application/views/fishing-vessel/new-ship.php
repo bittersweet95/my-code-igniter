@@ -4,7 +4,7 @@
         <div class="card-body">
             <h5 class="card-title">ข้อมูลเรือประมง</h5>
             <?php echo validation_errors(); ?>
-            <?php echo form_open('fishingvessel/create') ?>
+            <?php echo form_open_multipart('fishingvessel/create') ?>
                 <div class="form-group">
                     <label for="vesselName">ชื่อ</label>
                     <input id="vesselName" name="vesselName" class="form-control" type="text">
@@ -18,6 +18,12 @@
                     <?php endforeach ?>
                     </select>
                 </div>
+                <div class="form-group">
+                    <label for="vesselImage">เพิ่มรูปภาพ</label>
+                    <input type="file" name="vesselImage" id="vesselImage">
+                </div>
+ 
+
                 <input type="submit" value="เพิ่ม" name="submit" class="btn btn-primary btn-lg">
                
                 <button class="btn btn-secondary btn-lg">ล้าง</button>
