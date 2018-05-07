@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <script src="<?php=base_url() ?>assets/js/chart/fusioncharts.js"></script>
+    <script src="<?php=base_url() ?>assets/js/chart/fusioncharts.charts.js"></script>
+    <script src="<?php=base_url() ?>assets/js/chart/theme/fusioncharts.theme.fint.js"></script>
+    <script src="<?php=base_url() ?>assets/js/jquery-3.3.1.js"></script>
+    <script src="<?php=base_url() ?>assets/js/jquery-fusioncharts.js"></script>
     <title>Fishing Vessel</title>
 </head>
 <body>
@@ -21,6 +26,9 @@
       </li>
       <li class="nav-item">
         <a class="nav-link" href="<?php echo site_url('FishingVessel/new_vessel'); ?>">New Vessel</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="<?php echo site_url('FishingVessel/report'); ?>">report</a>
       </li>
     </ul>
       </div>
