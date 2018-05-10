@@ -28,9 +28,9 @@ class FishingVessel_model extends CI_Model {
 
     public function save_new_vessel_with_variable($vesselName,$Country_ID)
     {
-        $data['Name'] = $veselName;
+        $data['Name'] = $vesselName;
         $data['Country_ID'] = $Country_ID;
-        return $this->db->insert($data);
+        return $this->db->insert('Vessel',$data);
     }
     public function delete_vessel()
     {
