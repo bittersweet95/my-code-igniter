@@ -15,6 +15,10 @@ class FishingVessel extends CI_Controller {
         //var_dump($data);
         echo json_encode($data['vessels']);
     }
+    public function create()
+    {
+        
+    }
 
 }
 
